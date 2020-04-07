@@ -1,0 +1,16 @@
+image: dockslim/buildagent-ubuntu:latest
+manifests:
+  - image: dockslim/buildagent-ubuntu:amd64
+    platform:
+      architecture: amd64
+      os: linux
+  - image: dockslim/buildagent-ubuntu:arm32v7
+    platform:
+      architecture: arm
+      os: linux
+      variant: v7
+  - image: dockslim/buildagent-ubuntu:arm64v8
+    platform:
+      architecture: arm64
+      os: linux
+      variant: v8

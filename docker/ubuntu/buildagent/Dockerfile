@@ -1,4 +1,4 @@
-ARG UBUNTU_TAG=bionic
+ARG UBUNTU_TAG=latest
 FROM ubuntu:${UBUNTU_TAG}
 
 MAINTAINER dockslim
