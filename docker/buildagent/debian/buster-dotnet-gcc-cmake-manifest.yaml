@@ -1,15 +1,15 @@
-image: dockslim/buildagent:buster
+image: dockslim/dotnet-gcc-cmake:buster
 manifests:
-  - image: dockslim/buildagent:buster-amd64
+  - image: dockslim/dotnet-gcc-cmake:buster-amd64
     platform:
       architecture: amd64
       os: linux
-  - image: dockslim/buildagent:buster-arm32v7
+  - image: dockslim/dotnet-gcc-cmake:buster-arm32v7
     platform:
       architecture: arm
       os: linux
       variant: v7
-  - image: dockslim/buildagent:buster-arm64v8
+  - image: dockslim/dotnet-gcc-cmake:buster-arm64v8
     platform:
       architecture: arm64
       os: linux

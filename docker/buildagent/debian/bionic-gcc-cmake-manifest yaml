@@ -1,15 +1,15 @@
-image: dockslim/buildagent-alpine:latest
+image: dockslim/gcc-cmake:bionic
 manifests:
-  - image: dockslim/buildagent-alpine:amd64
+  - image: dockslim/gcc-cmake:bionic-amd64
     platform:
       architecture: amd64
       os: linux
-  - image: dockslim/buildagent-alpine:arm32v7
+  - image: dockslim/gcc-cmake:bionic-arm32v7
     platform:
       architecture: arm
       os: linux
       variant: v7
-  - image: dockslim/buildagent-alpine:arm64v8
+  - image: dockslim/gcc-cmake:bionic-arm64v8
     platform:
       architecture: arm64
       os: linux

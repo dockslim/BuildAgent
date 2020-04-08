@@ -1,0 +1,16 @@
+image: dockslim/gcc-cmake:latest
+manifests:
+  - image: dockslim/gcc-cmake:buster-amd64
+    platform:
+      architecture: amd64
+      os: linux
+  - image: dockslim/gcc-cmake:buster-arm32v7
+    platform:
+      architecture: arm
+      os: linux
+      variant: v7
+  - image: dockslim/gcc-cmake:buster-arm64v8
+    platform:
+      architecture: arm64
+      os: linux
+      variant: v8

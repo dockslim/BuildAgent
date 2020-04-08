@@ -1,0 +1,6 @@
+image: dockslim/dotnet-gcc-cmake:alpine
+manifests:
+  - image: dockslim/dotnet-gcc-cmake:alpine-amd64
+    platform:
+      architecture: amd64
+      os: linux
