@@ -5,9 +5,9 @@ FROM ${BASEIMG}
 RUN apk update \
  && apk add --no-cache \ 
     build-base \
+    gdb \
     cmake \
     ninja \
-    sudo \
     su-exec
 
 # Entrypoint/CMD

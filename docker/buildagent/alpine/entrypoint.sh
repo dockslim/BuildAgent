@@ -11,10 +11,12 @@ if [ -n "${INITCMD}" ]; then
 fi
 
 if [ -n "${USERID}" ]; then
+    USERNAME=buildagent
+
     # Create a new user
-    adduser -D -u ${USERID} buildagent
-    export HOME=/home/buildagent
-    exec /sbin/su-exec buildagent "$@"
+    adduser -D -u ${USERID} ${USERNAME}
+    export HOME=/home/${USERNAME}
+    exec /sbin/su-exec ${USERNAME} "$@"
 else
     exec "$@"
 fi
