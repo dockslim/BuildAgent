@@ -7,4 +7,3 @@ if (CMAKE_CROSSCOMPILING)
 else()
     add_test(NAME ApiTest COMMAND ApiTest)
 endif()
-

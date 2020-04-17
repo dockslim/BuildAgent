@@ -4,10 +4,8 @@ FROM ${BASEIMG}
 # c/c++ build and utilis
 RUN apk update \
  && apk add --no-cache \ 
-    build-base \
-    gdb \
-    cmake \
-    ninja \
+    ca-certificates curl gnupg openssh-client git \
+    build-base gdb cmake ninja fakeroot\
     su-exec
 
 # Entrypoint/CMD

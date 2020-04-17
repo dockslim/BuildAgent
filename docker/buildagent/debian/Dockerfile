@@ -6,18 +6,11 @@ MAINTAINER dockslim
 # install gcc/cmake/ninja
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
-    build-essential cmake ninja-build gdb \
+      ca-certificates netbase gnupg dirmngr \
+      curl wget openssh-client bzip2 unzip git \
+      build-essential gdb cmake ninja-build pkg-config fakeroot\
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
-
-# Create an utility to exec process as user
-WORKDIR /
-RUN git clone https://github.com/ncopa/su-exec.git \
- && cd /su-exec \
- && make \
- && cp su-exec /usr/bin/ \
- && cd / \
- && rm -rf su-exec
 
 # Entrypoint/CMD
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh

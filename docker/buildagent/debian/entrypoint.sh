@@ -11,10 +11,10 @@ if [ -n "${INITCMD}" ]; then
 fi
 
 if [ -n "${USERID}" ]; then
-    USERNAME=buildagent
+    USERNAME=user
     useradd -s /bin/bash --uid ${USERID} -o -c "" -m ${USERNAME}
     export HOME=/home/${USERNAME}
-    exec /usr/sbin/su-exec ${USERNAME} "$@"
+    exec /sbin/runuser -u ${USERNAME} "$@"
 else
     exec "$@"
 fi

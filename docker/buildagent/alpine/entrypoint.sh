@@ -11,7 +11,7 @@ if [ -n "${INITCMD}" ]; then
 fi
 
 if [ -n "${USERID}" ]; then
-    USERNAME=buildagent
+    USERNAME=user
 
     # Create a new user
     adduser -D -u ${USERID} ${USERNAME}
